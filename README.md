@@ -1,0 +1,1 @@
+This smart contract was created by the Trust Financial Association "Consent" on the basis of a contract with the company CarHash and for its use in a decentralized crowdsale. The use of tokens is only possible in accordance with the escrow agreement.
