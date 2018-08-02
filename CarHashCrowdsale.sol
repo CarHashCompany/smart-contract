@@ -14,7 +14,8 @@ import "./MintableToken.sol";
 
 
 contract CarHashCrowdsale {
-    uint256 constant public crowdsaleInitialSupply = 48000000 * 10 ** 18; //48% of token 
+    uint256 constant public crowdsaleInitialSupply = 48000000 * 10 ** 18; //48% of token
+    
     uint256 constant public crowdsaleSoftCap = 2000 ether; //SoftCap
     uint256 constant public crowdsaleHardCap = 6000 ether; //HardCap
     
@@ -40,6 +41,7 @@ contract CarHashCrowdsale {
     uint256 public weiRaised;
     uint256 public goal;
     uint256 public totalSupply = 100000000;
+    
     // amount of tokens each address will receive at the end of the crowdsale
     mapping (address => uint256) public creditOf;
 
@@ -47,9 +49,10 @@ contract CarHashCrowdsale {
     mapping (address => uint256) public weiInvestedBy;
 
     CarHashWhitelist public whitelist;
- event TokenPurchase(address indexed purchaser, address indexed beneficiary, uint256 value, uint256 amount);
+    
+    event TokenPurchase(address indexed purchaser, address indexed beneficiary, uint256 value, uint256 amount);
  
-    /** Constructor BitNauticICO */
+    /** Constructor CarHashToken*/
     constructor(CarHashToken _token, CarHashWhitelist _whitelist, address _wallet)
     {
         whitelist = _whitelist;
